@@ -14,26 +14,24 @@ st.set_page_config(
 # -----------------------------
 st.markdown("""
 <style>
-/* Hide Streamlit default UI */
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 header {visibility: hidden;}
 
 .stApp {
     background:
-        radial-gradient(circle at top left, rgba(168, 85, 247, 0.28), transparent 35%),
-        radial-gradient(circle at top right, rgba(124, 58, 237, 0.22), transparent 35%),
-        linear-gradient(135deg, #070014 0%, #120024 45%, #070014 100%);
+        radial-gradient(circle at top left, rgba(168, 85, 247, 0.30), transparent 35%),
+        radial-gradient(circle at top right, rgba(147, 51, 234, 0.25), transparent 38%),
+        linear-gradient(135deg, #070014 0%, #130026 50%, #070014 100%);
     color: #ffffff;
 }
 
 .block-container {
-    max-width: 1180px;
+    max-width: 1200px;
     padding-top: 2rem;
     padding-bottom: 4rem;
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -48,21 +46,21 @@ header {visibility: hidden;}
 }
 
 .logo-mark {
-    width: 38px;
-    height: 38px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #c084fc, #7c3aed);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 30px rgba(168, 85, 247, 0.55);
-    font-size: 20px;
-    font-weight: 800;
+    box-shadow: 0 0 35px rgba(168, 85, 247, 0.65);
+    font-size: 21px;
+    font-weight: 900;
 }
 
 .logo-text {
-    font-size: 24px;
-    font-weight: 800;
+    font-size: 26px;
+    font-weight: 850;
     letter-spacing: -0.5px;
 }
 
@@ -71,11 +69,10 @@ header {visibility: hidden;}
 }
 
 .nav-links {
-    color: #c9b8dd;
+    color: #d8c8ea;
     font-size: 14px;
 }
 
-/* Hero */
 .hero {
     text-align: center;
     padding: 70px 20px 45px 20px;
@@ -85,9 +82,9 @@ header {visibility: hidden;}
     display: inline-block;
     padding: 10px 18px;
     border-radius: 999px;
-    border: 1px solid rgba(192, 132, 252, 0.4);
-    background: rgba(168, 85, 247, 0.13);
-    color: #e9d5ff;
+    border: 1px solid rgba(216, 180, 254, 0.42);
+    background: rgba(168, 85, 247, 0.14);
+    color: #f3e8ff;
     font-size: 14px;
     margin-bottom: 24px;
 }
@@ -95,50 +92,26 @@ header {visibility: hidden;}
 .hero-title {
     font-size: 72px;
     line-height: 1.05;
-    font-weight: 850;
+    font-weight: 900;
     letter-spacing: -3px;
     max-width: 980px;
     margin: auto;
 }
 
 .hero-title span {
-    background: linear-gradient(90deg, #d8b4fe, #a855f7, #f0abfc);
+    background: linear-gradient(90deg, #f3e8ff, #c084fc, #a855f7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
-    max-width: 780px;
+    max-width: 800px;
     margin: 24px auto 0 auto;
-    color: #d8c8ea;
+    color: #dcccef;
     font-size: 21px;
     line-height: 1.7;
 }
 
-.hero-actions {
-    margin-top: 34px;
-}
-
-/* Buttons */
-.stButton > button {
-    background: linear-gradient(135deg, #a855f7, #7c3aed);
-    color: white;
-    border: 0;
-    border-radius: 999px;
-    padding: 0.85rem 2.1rem;
-    font-size: 16px;
-    font-weight: 700;
-    box-shadow: 0 18px 45px rgba(124, 58, 237, 0.35);
-    transition: all 0.25s ease;
-}
-
-.stButton > button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 22px 55px rgba(168, 85, 247, 0.45);
-    color: white;
-}
-
-/* Section */
 .section {
     margin-top: 75px;
 }
@@ -146,8 +119,8 @@ header {visibility: hidden;}
 .section-title {
     text-align: center;
     font-size: 42px;
-    font-weight: 820;
-    letter-spacing: -1.5px;
+    font-weight: 850;
+    letter-spacing: -1.4px;
     margin-bottom: 14px;
 }
 
@@ -160,13 +133,12 @@ header {visibility: hidden;}
     line-height: 1.7;
 }
 
-/* Cards */
 .card {
     background: rgba(255, 255, 255, 0.065);
     border: 1px solid rgba(216, 180, 254, 0.18);
     border-radius: 28px;
-    padding: 32px;
-    min-height: 285px;
+    padding: 30px;
+    min-height: 270px;
     box-shadow: 0 24px 70px rgba(0,0,0,0.28);
     backdrop-filter: blur(14px);
     transition: all 0.25s ease;
@@ -175,102 +147,89 @@ header {visibility: hidden;}
 .card:hover {
     transform: translateY(-7px);
     border-color: rgba(216, 180, 254, 0.55);
-    box-shadow: 0 28px 80px rgba(168, 85, 247, 0.18);
+    box-shadow: 0 28px 80px rgba(168, 85, 247, 0.20);
 }
 
 .card-icon {
-    width: 52px;
-    height: 52px;
+    width: 54px;
+    height: 54px;
     border-radius: 18px;
     background: rgba(168, 85, 247, 0.18);
     border: 1px solid rgba(216, 180, 254, 0.28);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #e9d5ff;
-    font-size: 24px;
-    font-weight: 800;
+    color: #f3e8ff;
+    font-size: 20px;
+    font-weight: 900;
     margin-bottom: 22px;
 }
 
 .card-title {
     color: #ffffff;
     font-size: 23px;
-    font-weight: 780;
+    font-weight: 800;
     margin-bottom: 13px;
 }
 
 .card-text {
-    color: #d6c7e7;
+    color: #d9cae8;
     font-size: 16px;
     line-height: 1.75;
 }
 
-/* Problem / opportunity */
-.split-box {
-    background: rgba(255,255,255,0.055);
-    border: 1px solid rgba(216, 180, 254, 0.16);
-    border-radius: 30px;
-    padding: 36px;
-    min-height: 310px;
-}
-
-.problem-item {
-    color: #d8c8ea;
-    font-size: 17px;
-    margin-bottom: 15px;
-    line-height: 1.5;
-}
-
 .highlight {
     color: #d8b4fe;
-    font-weight: 800;
+    font-weight: 850;
 }
 
-/* Workflow */
+.metric-box {
+    background: rgba(168, 85, 247, 0.13);
+    border: 1px solid rgba(216, 180, 254, 0.25);
+    border-radius: 26px;
+    padding: 28px;
+    text-align: center;
+    min-height: 150px;
+}
+
+.metric-number {
+    font-size: 40px;
+    font-weight: 900;
+    color: #d8b4fe;
+}
+
+.metric-label {
+    color: #dcccef;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+.interactive-box {
+    background: rgba(255,255,255,0.065);
+    border: 1px solid rgba(216, 180, 254, 0.20);
+    border-radius: 30px;
+    padding: 34px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+}
+
 .workflow {
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.16), rgba(255,255,255,0.045));
-    border: 1px solid rgba(216, 180, 254, 0.24);
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.18), rgba(255,255,255,0.055));
+    border: 1px solid rgba(216, 180, 254, 0.28);
     border-radius: 32px;
     padding: 38px;
     text-align: center;
 }
 
-.workflow-line {
-    color: #ffffff;
-    font-size: 25px;
-    font-weight: 750;
-    line-height: 1.8;
-}
-
-.workflow-line span {
-    color: #c084fc;
-}
-
-/* Stats */
-.stat-card {
-    background: rgba(168, 85, 247, 0.12);
-    border: 1px solid rgba(216, 180, 254, 0.24);
-    border-radius: 28px;
-    padding: 35px 25px;
+.workflow-step {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(216, 180, 254, 0.16);
+    border-radius: 20px;
+    padding: 18px;
     text-align: center;
-    min-height: 170px;
+    color: #ffffff;
+    font-weight: 750;
 }
 
-.stat-number {
-    font-size: 44px;
-    font-weight: 850;
-    color: #d8b4fe;
-    margin-bottom: 8px;
-}
-
-.stat-label {
-    color: #d8c8ea;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/* CTA */
 .cta {
     margin-top: 85px;
     background:
@@ -284,7 +243,7 @@ header {visibility: hidden;}
 
 .cta-title {
     font-size: 42px;
-    font-weight: 850;
+    font-weight: 900;
     margin-bottom: 15px;
 }
 
@@ -296,7 +255,33 @@ header {visibility: hidden;}
     line-height: 1.7;
 }
 
-/* Contact form */
+.stButton > button {
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    color: white;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.85rem 2.1rem;
+    font-size: 16px;
+    font-weight: 750;
+    box-shadow: 0 18px 45px rgba(124, 58, 237, 0.35);
+    transition: all 0.25s ease;
+}
+
+.stButton > button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 22px 55px rgba(168, 85, 247, 0.45);
+    color: white;
+}
+
+.stSelectbox label,
+.stSlider label,
+.stTextInput label,
+.stTextArea label,
+.stRadio label,
+.stMultiSelect label {
+    color: #ffffff !important;
+}
+
 .stTextInput input,
 .stTextArea textarea {
     background: rgba(255,255,255,0.08);
@@ -305,12 +290,24 @@ header {visibility: hidden;}
     border-radius: 16px;
 }
 
-.stTextInput label,
-.stTextArea label {
-    color: #ffffff !important;
+div[data-baseweb="select"] > div {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(216, 180, 254, 0.24);
+    color: white;
+    border-radius: 16px;
 }
 
-/* Responsive */
+[data-testid="stMetric"] {
+    background: rgba(168, 85, 247, 0.12);
+    border: 1px solid rgba(216, 180, 254, 0.22);
+    padding: 20px;
+    border-radius: 22px;
+}
+
+hr {
+    border: 0.5px solid rgba(255,255,255,0.12);
+}
+
 @media only screen and (max-width: 768px) {
     .hero-title {
         font-size: 43px;
@@ -325,10 +322,6 @@ header {visibility: hidden;}
         font-size: 31px;
     }
 
-    .workflow-line {
-        font-size: 18px;
-    }
-
     .navbar {
         display: block;
         text-align: center;
@@ -341,6 +334,58 @@ header {visibility: hidden;}
 }
 </style>
 """, unsafe_allow_html=True)
+
+
+# -----------------------------
+# Data
+# -----------------------------
+services = {
+    "AI Execution Systems": {
+        "headline": "Build AI systems that reduce manual work and improve execution.",
+        "description": "Best for companies that need workflow automation, reporting automation, QA engines, KPI tracking, and internal AI tools.",
+        "outputs": [
+            "AI PMO system",
+            "QA and validation engine",
+            "Automated reporting workflow",
+            "KPI tracking dashboard",
+            "Workflow automation system"
+        ],
+        "best_for": "Project teams, operations teams, consultancies, agencies, and companies managing repeated reporting or execution workflows."
+    },
+    "Content Marketing": {
+        "headline": "Turn your brand message into clear, strategic content.",
+        "description": "Best for businesses that need SEO content, landing pages, website copy, blogs, campaign messaging, and editorial planning.",
+        "outputs": [
+            "Website copy",
+            "SEO blogs",
+            "Landing pages",
+            "Content calendars",
+            "Editorial guidelines"
+        ],
+        "best_for": "Brands that want better visibility, clearer messaging, and content that supports business growth."
+    },
+    "Social Media Strategy": {
+        "headline": "Build a stronger and more consistent social media presence.",
+        "description": "Best for brands that need platform-specific content, campaign ideas, captions, content calendars, and performance direction.",
+        "outputs": [
+            "Social media strategy",
+            "Monthly content calendar",
+            "Campaign concepts",
+            "Captions and post ideas",
+            "Performance review"
+        ],
+        "best_for": "Brands that want to improve consistency, engagement, and storytelling across social platforms."
+    }
+}
+
+use_cases = {
+    "PMO Automation": "Automate project updates, task tracking, status reports, and follow-up workflows.",
+    "KPI Tracking": "Convert scattered data into simple performance indicators and dashboard-ready insights.",
+    "Report Generation": "Generate structured reports faster with consistent formatting, language, and quality.",
+    "Compliance Validation": "Check outputs against internal standards, rules, requirements, or brand guidelines.",
+    "Content QA": "Review content for accuracy, tone, structure, SEO, and consistency before publishing.",
+    "Workflow Automation": "Reduce repetitive operational tasks through AI-supported processes."
+}
 
 
 # -----------------------------
@@ -364,177 +409,241 @@ st.markdown("""
 <div class="hero">
     <div class="badge">AI-Powered Execution Systems</div>
     <div class="hero-title">
-        We help businesses execute faster with <span>AI, content, and digital strategy.</span>
+        We turn strategy into <span>faster, smarter execution.</span>
     </div>
     <div class="hero-subtitle">
-        Digit ai builds practical AI systems and marketing solutions that reduce manual work, 
-        improve consistency, and turn strategy into measurable execution.
+        Digit ai helps businesses reduce manual work, automate workflows, improve content quality, 
+        and build stronger digital execution across AI, content marketing, and social media.
     </div>
 </div>
 """, unsafe_allow_html=True)
 
-btn_col1, btn_col2, btn_col3 = st.columns([1, 1, 1])
-with btn_col2:
-    st.button("Book a Consultation")
+hero_col1, hero_col2, hero_col3 = st.columns([1, 1, 1])
+with hero_col2:
+    if st.button("Explore Services"):
+        st.session_state["explore_clicked"] = True
+
+if st.session_state.get("explore_clicked"):
+    st.success("Great. Start by choosing a service below.")
 
 
 # -----------------------------
-# Problem / Opportunity
+# Interactive Service Selector
 # -----------------------------
 st.markdown("""
 <div class="section">
-    <div class="section-title">The Problem We Solve</div>
+    <div class="section-title">Choose What You Need</div>
     <div class="section-subtitle">
-        Many businesses have strong strategies, but execution becomes slow, manual, and inconsistent.
+        Select a service and see how Digit ai can support your business.
     </div>
 </div>
 """, unsafe_allow_html=True)
 
-left, right = st.columns(2)
+st.markdown('<div class="interactive-box">', unsafe_allow_html=True)
 
-with left:
-    st.markdown("""
-    <div class="split-box">
-        <div class="card-title">Common Business Challenges</div>
-        <div class="problem-item">◆ Strategies fail because execution is not structured.</div>
-        <div class="problem-item">◆ Reporting takes too much manual effort.</div>
-        <div class="problem-item">◆ Decisions become slow because data is scattered.</div>
-        <div class="problem-item">◆ Outputs are inconsistent across teams, projects, and campaigns.</div>
-    </div>
-    """, unsafe_allow_html=True)
+selected_service = st.selectbox(
+    "Which service are you most interested in?",
+    list(services.keys())
+)
 
-with right:
-    st.markdown("""
-    <div class="split-box">
-        <div class="card-title">Our Opportunity</div>
-        <div class="card-text">
-            Digit ai adds an AI-powered execution layer inside your projects, workflows, 
-            and marketing operations.
-            <br><br>
-            This helps teams move from manual coordination to faster, smarter, and more consistent delivery.
-            <br><br>
-            <span class="highlight">The goal is simple: less manual work, better execution, and clearer results.</span>
+service = services[selected_service]
+
+st.markdown(f"""
+<div class="card-title">{service["headline"]}</div>
+<div class="card-text">{service["description"]}</div>
+<br>
+<div class="highlight">Best for:</div>
+<div class="card-text">{service["best_for"]}</div>
+""", unsafe_allow_html=True)
+
+st.write("")
+
+output_cols = st.columns(len(service["outputs"]))
+
+for col, output in zip(output_cols, service["outputs"]):
+    with col:
+        st.markdown(f"""
+        <div class="metric-box">
+            <div class="metric-label">{output}</div>
         </div>
-    </div>
-    """, unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
+
+st.markdown('</div>', unsafe_allow_html=True)
 
 
 # -----------------------------
-# Services
+# Tabs
 # -----------------------------
 st.markdown("""
 <div class="section">
-    <div class="section-title">Our Services</div>
+    <div class="section-title">Explore Digit ai Services</div>
     <div class="section-subtitle">
-        We combine AI implementation with content and social media expertise to support business growth from planning to execution.
+        Use the tabs below to explore each service area in more detail.
     </div>
 </div>
 """, unsafe_allow_html=True)
 
-s1, s2, s3 = st.columns(3)
+tab1, tab2, tab3 = st.tabs(["AI Systems", "Content Marketing", "Social Media"])
 
-with s1:
-    st.markdown("""
-    <div class="card">
-        <div class="card-icon">AI</div>
-        <div class="card-title">AI Execution Systems</div>
-        <div class="card-text">
-            We design AI-powered systems that help teams automate workflows, validate outputs, 
-            generate reports, track KPIs, and improve project execution.
-            <br><br>
-            This includes AI PMO systems, QA engines, workflow automation, and dashboard-ready outputs.
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+with tab1:
+    st.markdown("### AI Systems")
+    st.write(
+        "We build AI-powered execution systems that help teams automate work, validate outputs, "
+        "generate reports, track KPIs, and improve project delivery."
+    )
 
-with s2:
-    st.markdown("""
-    <div class="card">
-        <div class="card-icon">CM</div>
-        <div class="card-title">Content Marketing</div>
-        <div class="card-text">
-            We create strategic content that improves brand visibility, supports SEO, 
-            and communicates your message clearly.
-            <br><br>
-            This includes website copy, blogs, landing pages, campaign content, content planning, 
-            and editorial quality checks.
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    c1, c2, c3 = st.columns(3)
 
-with s3:
-    st.markdown("""
-    <div class="card">
-        <div class="card-icon">SM</div>
-        <div class="card-title">Social Media Strategy</div>
-        <div class="card-text">
-            We help brands build a stronger social media presence through clear planning, 
-            creative content ideas, and consistent execution.
-            <br><br>
-            This includes content calendars, captions, campaign concepts, performance reviews, 
-            and platform-specific direction.
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    with c1:
+        st.metric("Manual Work Reduction", "60–80%")
+    with c2:
+        st.metric("Pilot Duration", "2–3 Weeks")
+    with c3:
+        st.metric("Core Focus", "Execution")
+
+    with st.expander("What AI systems can Digit ai build?"):
+        st.write("""
+        - AI PMO systems  
+        - QA and validation engines  
+        - Automated reporting systems  
+        - Workflow automation tools  
+        - KPI tracking dashboards  
+        - Internal AI assistants  
+        """)
+
+    with st.expander("Best AI project to start with"):
+        st.write("""
+        Start with one real workflow that is repetitive, manual, and easy to measure. 
+        For example: weekly reporting, project status tracking, compliance checking, or content QA.
+        """)
+
+with tab2:
+    st.markdown("### Content Marketing")
+    st.write(
+        "We help brands create content that is clear, searchable, useful, and aligned with their business goals."
+    )
+
+    with st.expander("Content services"):
+        st.write("""
+        - Website copy  
+        - SEO blogs  
+        - Landing pages  
+        - Content calendars  
+        - Campaign content  
+        - Editorial review and QA  
+        """)
+
+    with st.expander("What makes the content stronger?"):
+        st.write("""
+        The content should be structured around search intent, brand positioning, user needs, 
+        and clear calls to action. The goal is not just to publish more content, but to publish content that performs.
+        """)
+
+with tab3:
+    st.markdown("### Social Media")
+    st.write(
+        "We help brands plan, structure, and improve their social media presence with consistent messaging and better execution."
+    )
+
+    with st.expander("Social media services"):
+        st.write("""
+        - Social media strategy  
+        - Monthly content calendars  
+        - Caption writing  
+        - Campaign ideas  
+        - Platform-specific content direction  
+        - Performance review  
+        """)
+
+    with st.expander("Best social media starting point"):
+        st.write("""
+        Start by defining your content pillars, target audience, tone of voice, and monthly campaign priorities. 
+        Then turn that into a practical content calendar.
+        """)
 
 
 # -----------------------------
-# AI Use Cases
+# Interactive Use Cases
 # -----------------------------
 st.markdown("""
 <div class="section">
-    <div class="section-title">AI Use Cases</div>
+    <div class="section-title">AI Use Case Finder</div>
     <div class="section-subtitle">
-        Our AI systems are built around practical business needs, not abstract technology.
+        Choose a use case and see how Digit ai can apply it inside a real business workflow.
     </div>
 </div>
 """, unsafe_allow_html=True)
 
-u1, u2, u3, u4 = st.columns(4)
+st.markdown('<div class="interactive-box">', unsafe_allow_html=True)
 
-with u1:
-    st.markdown("""
-    <div class="card">
-        <div class="card-icon">01</div>
-        <div class="card-title">PMO Automation</div>
-        <div class="card-text">
-            Automate project tracking, task follow-ups, status updates, and delivery documentation.
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+selected_use_case = st.radio(
+    "Select a use case:",
+    list(use_cases.keys()),
+    horizontal=True
+)
 
-with u2:
-    st.markdown("""
-    <div class="card">
-        <div class="card-icon">02</div>
-        <div class="card-title">KPI Tracking</div>
-        <div class="card-text">
-            Turn scattered project data into clear indicators that help teams make faster decisions.
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+st.markdown(f"""
+<div class="card-title">{selected_use_case}</div>
+<div class="card-text">{use_cases[selected_use_case]}</div>
+""", unsafe_allow_html=True)
 
-with u3:
-    st.markdown("""
-    <div class="card">
-        <div class="card-icon">03</div>
-        <div class="card-title">Report Generation</div>
-        <div class="card-text">
-            Generate structured reports faster with consistent formatting, language, and insights.
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+if selected_use_case == "PMO Automation":
+    st.info("Example: Turn project updates, owner comments, and task progress into an automated weekly status report.")
+elif selected_use_case == "KPI Tracking":
+    st.info("Example: Convert weekly project data into dashboard-ready KPIs for faster decision-making.")
+elif selected_use_case == "Report Generation":
+    st.info("Example: Generate clean reports from raw notes, sheets, meeting updates, or project inputs.")
+elif selected_use_case == "Compliance Validation":
+    st.info("Example: Check outputs against required rules, client standards, or internal guidelines.")
+elif selected_use_case == "Content QA":
+    st.info("Example: Review content for tone, missing information, structure, SEO, and consistency.")
+elif selected_use_case == "Workflow Automation":
+    st.info("Example: Automate repetitive steps between input, review, output, and reporting.")
 
-with u4:
-    st.markdown("""
-    <div class="card">
-        <div class="card-icon">04</div>
-        <div class="card-title">Compliance Validation</div>
-        <div class="card-text">
-            Review outputs against rules, guidelines, requirements, or internal quality standards.
-        </div>
+st.markdown('</div>', unsafe_allow_html=True)
+
+
+# -----------------------------
+# Work Reduction Calculator
+# -----------------------------
+st.markdown("""
+<div class="section">
+    <div class="section-title">Manual Work Reduction Calculator</div>
+    <div class="section-subtitle">
+        Estimate how many hours your team could save by automating repetitive work.
     </div>
-    """, unsafe_allow_html=True)
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown('<div class="interactive-box">', unsafe_allow_html=True)
+
+calc_col1, calc_col2, calc_col3 = st.columns(3)
+
+with calc_col1:
+    weekly_hours = st.slider("Current manual hours per week", 1, 100, 25)
+
+with calc_col2:
+    reduction = st.slider("Expected automation reduction", 10, 80, 60)
+
+with calc_col3:
+    team_members = st.slider("Number of team members affected", 1, 30, 3)
+
+weekly_saved = weekly_hours * (reduction / 100) * team_members
+monthly_saved = weekly_saved * 4
+yearly_saved = weekly_saved * 52
+
+m1, m2, m3 = st.columns(3)
+
+with m1:
+    st.metric("Weekly Hours Saved", f"{weekly_saved:.0f}")
+with m2:
+    st.metric("Monthly Hours Saved", f"{monthly_saved:.0f}")
+with m3:
+    st.metric("Yearly Hours Saved", f"{yearly_saved:.0f}")
+
+st.caption("This is an estimate based on the selected manual workload and expected automation reduction.")
+
+st.markdown('</div>', unsafe_allow_html=True)
 
 
 # -----------------------------
@@ -542,57 +651,67 @@ with u4:
 # -----------------------------
 st.markdown("""
 <div class="section">
-    <div class="section-title">How It Works</div>
+    <div class="section-title">How Our AI Workflow Works</div>
     <div class="section-subtitle">
-        A simple execution workflow that converts inputs into reviewed, structured, and usable outputs.
-    </div>
-</div>
-
-<div class="workflow">
-    <div class="workflow-line">
-        Input <span>→</span> AI Processing <span>→</span> QA <span>→</span> Output <span>→</span> Dashboard
+        A clear execution flow from raw input to reviewed output and dashboard-ready results.
     </div>
 </div>
 """, unsafe_allow_html=True)
 
+w1, w2, w3, w4, w5 = st.columns(5)
+
+workflow_steps = [
+    ("Input", "Documents, sheets, notes, project data, or content requests."),
+    ("AI Processing", "AI structures, analyzes, drafts, or automates the required output."),
+    ("QA", "Outputs are validated against rules, standards, and quality checks."),
+    ("Output", "The final result is formatted, reviewed, and ready to use."),
+    ("Dashboard", "Results can be tracked through reports, metrics, or dashboards.")
+]
+
+for col, step in zip([w1, w2, w3, w4, w5], workflow_steps):
+    with col:
+        st.markdown(f"""
+        <div class="workflow-step">
+            {step[0]}
+        </div>
+        """, unsafe_allow_html=True)
+        st.caption(step[1])
+
 
 # -----------------------------
-# Impact
+# Project Fit Assessment
 # -----------------------------
 st.markdown("""
 <div class="section">
-    <div class="section-title">Expected Impact</div>
+    <div class="section-title">Is Your Project a Good Fit?</div>
     <div class="section-subtitle">
-        Digit ai is built to help teams reduce repetitive work and improve execution quality.
+        Answer a few questions and get a quick recommendation.
     </div>
 </div>
 """, unsafe_allow_html=True)
 
-i1, i2, i3 = st.columns(3)
+st.markdown('<div class="interactive-box">', unsafe_allow_html=True)
 
-with i1:
-    st.markdown("""
-    <div class="stat-card">
-        <div class="stat-number">60–80%</div>
-        <div class="stat-label">Potential reduction in manual work</div>
-    </div>
-    """, unsafe_allow_html=True)
+q1 = st.checkbox("The workflow is repetitive or manual.")
+q2 = st.checkbox("The output needs consistent formatting or quality.")
+q3 = st.checkbox("The team spends time preparing reports or updates.")
+q4 = st.checkbox("There are rules, guidelines, or standards that need to be checked.")
+q5 = st.checkbox("The work can be tested on one real project first.")
 
-with i2:
-    st.markdown("""
-    <div class="stat-card">
-        <div class="stat-number">Faster</div>
-        <div class="stat-label">Execution, reporting, and decision-making</div>
-    </div>
-    """, unsafe_allow_html=True)
+score = sum([q1, q2, q3, q4, q5])
 
-with i3:
-    st.markdown("""
-    <div class="stat-card">
-        <div class="stat-number">Higher</div>
-        <div class="stat-label">Consistency across content, reports, and workflows</div>
-    </div>
-    """, unsafe_allow_html=True)
+st.progress(score / 5)
+
+if score == 0:
+    st.warning("Your project may need more definition before starting.")
+elif score <= 2:
+    st.info("This could be a fit, but the workflow should be clarified first.")
+elif score <= 4:
+    st.success("This looks like a good fit for a Digit ai pilot.")
+else:
+    st.success("Strong fit. This is a great candidate for a 2–3 week Proof of Concept.")
+
+st.markdown('</div>', unsafe_allow_html=True)
 
 
 # -----------------------------
@@ -602,56 +721,58 @@ st.markdown("""
 <div class="section">
     <div class="section-title">Engagement Model</div>
     <div class="section-subtitle">
-        Flexible ways to work with Digit ai depending on your business needs.
+        Choose the model that best fits how you want to work with Digit ai.
     </div>
 </div>
 """, unsafe_allow_html=True)
 
-e1, e2, e3 = st.columns(3)
+model = st.selectbox(
+    "Choose an engagement model:",
+    ["Project-Based", "Embedded Partner", "White-Label"]
+)
 
-with e1:
+if model == "Project-Based":
     st.markdown("""
-    <div class="card">
-        <div class="card-icon">P</div>
+    <div class="interactive-box">
         <div class="card-title">Project-Based</div>
         <div class="card-text">
-            Ideal for companies that need one specific AI system, campaign, content project, or automation workflow.
+            Best for one clear AI system, content project, campaign, or workflow automation need.
+            This model works well when the scope and output are already defined.
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-with e2:
+elif model == "Embedded Partner":
     st.markdown("""
-    <div class="card">
-        <div class="card-icon">E</div>
+    <div class="interactive-box">
         <div class="card-title">Embedded Partner</div>
         <div class="card-text">
-            We work closely with your team as an execution partner across AI, content, and digital operations.
+            Best for companies that need ongoing support across AI, content, marketing, and digital execution.
+            Digit ai works closely with your team as an execution partner.
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-with e3:
+else:
     st.markdown("""
-    <div class="card">
-        <div class="card-icon">W</div>
+    <div class="interactive-box">
         <div class="card-title">White-Label</div>
         <div class="card-text">
-            We support agencies, consultants, and partners with AI and content execution under their own brand.
+            Best for agencies, consultants, or partners that want AI and content execution delivered under their own brand.
         </div>
     </div>
     """, unsafe_allow_html=True)
 
 
 # -----------------------------
-# Pilot CTA
+# CTA
 # -----------------------------
 st.markdown("""
 <div class="cta">
     <div class="cta-title">Start with a 2–3 Week Proof of Concept</div>
     <div class="cta-text">
         The best way to test Digit ai is on a real project. We identify one workflow, build a focused AI-powered solution, 
-        validate the output, and show the impact before scaling.
+        validate the output, and measure the impact before scaling.
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -662,9 +783,9 @@ st.markdown("""
 # -----------------------------
 st.markdown("""
 <div class="section">
-    <div class="section-title">Let’s Build Your AI Execution Layer</div>
+    <div class="section-title">Let’s Build Your Execution Layer</div>
     <div class="section-subtitle">
-        Tell us what you want to improve: reporting, content, social media, workflow automation, or project execution.
+        Tell us what you want to improve, and Digit ai will help shape the right starting point.
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -673,14 +794,14 @@ contact_left, contact_right = st.columns([1, 1])
 
 with contact_left:
     st.markdown("""
-    <div class="split-box">
+    <div class="interactive-box">
         <div class="card-title">Contact Digit ai</div>
         <div class="card-text">
-            Replace the details below with your real email, phone number, or booking link.
+            Replace these details with your real contact information.
             <br><br>
             <span class="highlight">Email:</span> hello@digitai.com<br>
-            <span class="highlight">Location:</span> UAE / GCC<br>
-            <span class="highlight">Services:</span> AI systems, content marketing, and social media
+            <span class="highlight">Services:</span> AI systems, content marketing, and social media<br>
+            <span class="highlight">Pilot:</span> 2–3 week Proof of Concept
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -689,12 +810,15 @@ with contact_right:
     with st.form("contact_form"):
         name = st.text_input("Name")
         email = st.text_input("Email")
-        service = st.text_input("What service are you interested in?")
+        selected_contact_service = st.selectbox(
+            "Service needed",
+            ["AI Execution Systems", "Content Marketing", "Social Media Strategy", "Not sure yet"]
+        )
         message = st.text_area("Tell us about your project")
         submitted = st.form_submit_button("Send Message")
 
         if submitted:
-            st.success("Thank you. Your message has been received.")
+            st.success(f"Thank you, {name if name else 'there'}. Your request for {selected_contact_service} has been received.")
 
 
 # -----------------------------
@@ -702,7 +826,7 @@ with contact_right:
 # -----------------------------
 st.markdown("""
 <br><br>
-<hr style="border: 0.5px solid rgba(255,255,255,0.12);">
+<hr>
 <p style="text-align:center; color:#a99abc;">
 © 2026 Digit ai. AI-Powered Execution Systems.
 </p>
